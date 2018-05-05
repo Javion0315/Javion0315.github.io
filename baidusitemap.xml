@@ -4,13 +4,15 @@
 
     
   <url>
-    <loc>http://yoursite.com/2018/05/06/demo/</loc>
-    <lastmod>2018-05-05T16:12:02.974Z</lastmod>
+    <loc>http://yoursite.com/2018/05/03/angular-enviroment/</loc>
+    <lastmod>2018-05-05T19:16:48.262Z</lastmod>
     <data>
         <display>
-        <title>demo</title>
-        <pubTime>2018-05-05T16:12:02.000Z</pubTime>
+        <title>建立 Angular 開發環境</title>
+        <pubTime>2018-05-03T03:30:00.000Z</pubTime>
         
+        <tag>-angular</tag>
+         
          
            
         </display>
@@ -19,13 +21,15 @@
 
     
   <url>
-    <loc>http://yoursite.com/2018/05/06/hello-world/</loc>
-    <lastmod>2018-05-05T16:11:03.856Z</lastmod>
+    <loc>http://yoursite.com/2018/05/04/angular-config/</loc>
+    <lastmod>2018-05-05T19:13:50.779Z</lastmod>
     <data>
         <display>
-        <title>Hello World</title>
-        <pubTime>2018-05-05T16:11:03.850Z</pubTime>
+        <title>angular 設定檔介紹</title>
+        <pubTime>2018-05-04T06:10:00.000Z</pubTime>
         
+        <tag>-angular</tag>
+         
          
            
         </display>

@@ -190,7 +190,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        
+                        <a href="/tags/angular/" style="font-size: 10px;">-angular</a>
                     </div>
                 </section>
                 
@@ -263,11 +263,11 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-demo" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-angular-config" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2018/05/06/demo/" class="article-date">
-      <time datetime="2018-05-05T16:12:02.000Z" itemprop="datePublished">2018-05-06</time>
+      <a  href="/2018/05/04/angular-config/" class="article-date">
+      <time datetime="2018-05-04T06:10:00.000Z" itemprop="datePublished">2018-05-04</time>
 </a>
 
     </div>
@@ -281,7 +281,7 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2018/05/06/demo/">demo</a>
+      <a  class="article-title" href="/2018/05/04/angular-config/">angular 設定檔介紹</a>
     </h1>
   
 
@@ -292,7 +292,12 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        
+        <p>karma.conf.js  –&gt; 當需要用到karma單元測試工具的時候可能會用到<br>package.json  –&gt; 目前專案npm的設定檔，最重要的為script區段是經常會用到的命令，也可修改不同的命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"scripts"</span>: &#123;</span><br><span class="line"><span class="string">"ng"</span>: <span class="string">"ng"</span>,</span><br><span class="line"><span class="string">"start"</span>: <span class="string">"ng serve"</span>,</span><br><span class="line"><span class="string">"build"</span>: <span class="string">"ng build --prod"</span>,</span><br><span class="line"><span class="string">"test"</span>: <span class="string">"ng test"</span>,</span><br><span class="line"><span class="string">"lint"</span>: <span class="string">"ng lint"</span>,</span><br><span class="line"><span class="string">"e2e"</span>: <span class="string">"ng e2e"</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure></p>
+<p>protractor.conf.js –&gt; 則是我們在angular裡面實作end to end (e2e) testing的時候會需要用到的設定檔<br>tsconfig.json –&gt; typescript 的相關設定存放的地方，通常不需要修改<br>tslint.json –&gt; 另外一個為tslint的工具，用來定義當你使用tslint工具檢查程式碼品質的時候，所有檢查的規則都定義在這個檔案裡面<br>node_module –&gt; 透過npm安裝好的套件都在這個目錄下，通常不動<br>e2e –&gt; 都是使用typescript寫成的<br>src –&gt; 所有angular的主要程式都放在這個資料夾</p>
+<hr>
+
+<p>main.ts –&gt; angular 開發javascript的主要檔案<br>app.component.spec.ts / test.ts –&gt; 用來單元測試的定義檔，用來定義如何測試component檔<br>polyfiles.ts –&gt; 使用舊版的瀏覽器時可將相對的註解打開，即可自動import進去<br>typings.d.ts –&gt; typescript會用到的定義檔，用來定義那些額外的typescript型別定義，例: 想整合jquery到                            angular網站裡，便須修改此設定檔</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">declare</span> var $:any; // 定義會用到的全域變數(jquery)</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -301,6 +306,10 @@
       
 
       
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angular/">-angular</a></li></ul>
+    </div>
+
       
       <div class="clearfix"></div>
     </div>
@@ -320,11 +329,11 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-angular-enviroment" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2018/05/06/hello-world/" class="article-date">
-      <time datetime="2018-05-05T16:11:03.850Z" itemprop="datePublished">2018-05-06</time>
+      <a  href="/2018/05/03/angular-enviroment/" class="article-date">
+      <time datetime="2018-05-03T03:30:00.000Z" itemprop="datePublished">2018-05-03</time>
 </a>
 
     </div>
@@ -338,7 +347,7 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2018/05/06/hello-world/">Hello World</a>
+      <a  class="article-title" href="/2018/05/03/angular-enviroment/">建立 Angular 開發環境</a>
     </h1>
   
 
@@ -349,16 +358,11 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+        <p>windows平台套件 –&gt;<a href="https://chocolatey.org/install" target="_blank" rel="noopener">chocolatey</a><br><b><u>使用cmd安裝的時候要使用系統管理員執行，否則會出錯</u></b></p>
+<p>此軟件可以一次性安裝需要軟件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">choco install -y GoogleChrome git nodejs visualstudiocode notepadplusplus</span><br></pre></td></tr></table></figure></p>
+<p>查看版本是否安裝成功<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git version</span><br><span class="line">node -v</span><br><span class="line">code -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure></p>
+<p>安裝angulur CLI<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm i -g @angular/cli</span><br><span class="line">ng -v 查看是否安裝成功</span><br></pre></td></tr></table></figure></p>
+<h3 id="vscode安裝擴充套件-–-gt-angular-extension-pack-保哥"><a href="#vscode安裝擴充套件-–-gt-angular-extension-pack-保哥" class="headerlink" title="vscode安裝擴充套件 –&gt;  angular extension pack 保哥"></a>vscode安裝擴充套件 –&gt;  <b><u>angular extension pack 保哥</u></b></h3>
       
     </div>
     
@@ -367,6 +371,10 @@
       
 
       
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angular/">-angular</a></li></ul>
+    </div>
+
       
       <div class="clearfix"></div>
     </div>
