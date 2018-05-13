@@ -90,9 +90,9 @@
     <link href="http://yoursite.com/2017/07/28/gridview/"/>
     <id>http://yoursite.com/2017/07/28/gridview/</id>
     <published>2017-07-28T09:04:00.000Z</published>
-    <updated>2018-05-13T12:14:48.682Z</updated>
+    <updated>2018-05-13T12:17:21.539Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="新建Datatable存資料"><a href="#新建Datatable存資料" class="headerlink" title="新建Datatable存資料"></a>新建Datatable存資料</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">Dim dt As DataTable = New DataTable</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">            dt.Columns.Add(<span class="string">"F_SGR_NAME"</span>, GetType(System.String))</span><br><span class="line"></span><br><span class="line">            dt.Columns.Add(<span class="string">"GH_ATOLSM"</span>, GetType(System.String))</span><br><span class="line"></span><br><span class="line">            dt.Columns.Add(<span class="string">"F_ADDR"</span>, GetType(System.String))</span><br><span class="line"></span><br><span class="line">            dt.Columns.Add(<span class="string">"HP_DGM"</span>, GetType(System.String))</span><br><span class="line"></span><br><span class="line">            dt.Columns.Add(<span class="string">"HP_PM"</span>, GetType(System.String))</span><br><span class="line"></span><br><span class="line">            dt.Columns.Add(<span class="string">"Sum"</span>, GetType(System.String))</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">    ViewState(<span class="string">"datatable"</span>) = dt  //將DataTable存到ViewState</span><br></pre></td></tr></table></figure><h2 id="讀回ViewState-中的DataTable資料"><a href="#讀回ViewState-中的DataTable資料" class="headerlink" title="讀回ViewState 中的DataTable資料"></a>讀回ViewState 中的DataTable資料</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dim dt As DataTable = CType(ViewState(<span class="string">"datatable"</span>), DataTable)</span><br></pre></td></tr></table></figure><h2 id="創建新的DataRow，將資料寫入，並新增到DataTable"><a href="#創建新的DataRow，將資料寫入，並新增到DataTable" class="headerlink" title="創建新的DataRow，將資料寫入，並新增到DataTable"></a>創建新的DataRow，將資料寫入，並新增到DataTable</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">         Dim drow As DataRow</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">drow = dt.NewRow()</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">drow(0) = ddl_company.SelectedItem.Text</span><br><span class="line"></span><br><span class="line">drow(1) = ddl_address.SelectedValue</span><br><span class="line"></span><br><span class="line">drow(2) = ddl_address.SelectedItem.Text</span><br><span class="line"></span><br><span class="line">drow(3) = ddl_product.SelectedValue</span><br><span class="line"></span><br><span class="line">drow(4) = ddl_product.SelectedItem.Text</span><br><span class="line"></span><br><span class="line">drow(5) = GetValue(tb_sum.Text)</span><br><span class="line"></span><br><span class="line">dt.Rows.Add(drow)</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">        ViewState(<span class="string">"datatable"</span>) = dt</span><br></pre></td></tr></table></figure><h2 id="將DataTable與GridView做資料繫節，顯示資料"><a href="#將DataTable與GridView做資料繫節，顯示資料" class="headerlink" title="將DataTable與GridView做資料繫節，顯示資料"></a>將DataTable與GridView做資料繫節，顯示資料</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GridView1.DataSource = dt</span><br><span class="line"></span><br><span class="line">                    GridView1.DataBind()</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h2 id="新建Datatable存資料"><a href="#新建Datatable存資料" class="headerlink" title="新建Datatable存資料"></a>新建Datatable存資料</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Dim dt As DataTable = New DataTable</span><br><span class="line"></span><br><span class="line">            dt.Columns.Add(<span class="string">"F_SGR_NAME"</span>, GetType(System.String))</span><br><span class="line"></span><br><span class="line">            dt.Columns.Add(<span class="string">"GH_ATOLSM"</span>, GetType(System.String))</span><br><span class="line"></span><br><span class="line">            dt.Columns.Add(<span class="string">"F_ADDR"</span>, GetType(System.String))</span><br><span class="line"></span><br><span class="line">            dt.Columns.Add(<span class="string">"HP_DGM"</span>, GetType(System.String))</span><br><span class="line"></span><br><span class="line">            dt.Columns.Add(<span class="string">"HP_PM"</span>, GetType(System.String))</span><br><span class="line"></span><br><span class="line">            dt.Columns.Add(<span class="string">"Sum"</span>, GetType(System.String))</span><br><span class="line"></span><br><span class="line">    ViewState(<span class="string">"datatable"</span>) = dt  //將DataTable存到ViewState</span><br></pre></td></tr></table></figure><h2 id="讀回ViewState-中的DataTable資料"><a href="#讀回ViewState-中的DataTable資料" class="headerlink" title="讀回ViewState 中的DataTable資料"></a>讀回ViewState 中的DataTable資料</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dim dt As DataTable = CType(ViewState(<span class="string">"datatable"</span>), DataTable)</span><br></pre></td></tr></table></figure><h2 id="創建新的DataRow，將資料寫入，並新增到DataTable"><a href="#創建新的DataRow，將資料寫入，並新增到DataTable" class="headerlink" title="創建新的DataRow，將資料寫入，並新增到DataTable"></a>創建新的DataRow，將資料寫入，並新增到DataTable</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">Dim drow As DataRow</span><br><span class="line"></span><br><span class="line">           drow = dt.NewRow()</span><br><span class="line"></span><br><span class="line">           drow(0) = ddl_company.SelectedItem.Text</span><br><span class="line"></span><br><span class="line">           drow(1) = ddl_address.SelectedValue</span><br><span class="line"></span><br><span class="line">           drow(2) = ddl_address.SelectedItem.Text</span><br><span class="line"></span><br><span class="line">           drow(3) = ddl_product.SelectedValue</span><br><span class="line"></span><br><span class="line">           drow(4) = ddl_product.SelectedItem.Text</span><br><span class="line"></span><br><span class="line">           drow(5) = GetValue(tb_sum.Text)</span><br><span class="line"></span><br><span class="line">           dt.Rows.Add(drow)</span><br><span class="line"></span><br><span class="line"> ViewState(<span class="string">"datatable"</span>) = dt</span><br></pre></td></tr></table></figure><h2 id="將DataTable與GridView做資料繫節，顯示資料"><a href="#將DataTable與GridView做資料繫節，顯示資料" class="headerlink" title="將DataTable與GridView做資料繫節，顯示資料"></a>將DataTable與GridView做資料繫節，顯示資料</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GridView1.DataSource = dt</span><br><span class="line"></span><br><span class="line">      GridView1.DataBind()</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
@@ -107,6 +107,33 @@
       <category term="暑期實習" scheme="http://yoursite.com/tags/%E6%9A%91%E6%9C%9F%E5%AF%A6%E7%BF%92/"/>
     
       <category term="-Asp.net" scheme="http://yoursite.com/tags/Asp-net/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C# AD撈法</title>
+    <link href="http://yoursite.com/2017/07/23/AD/"/>
+    <id>http://yoursite.com/2017/07/23/AD/</id>
+    <published>2017-07-23T05:53:00.000Z</published>
+    <updated>2018-05-13T12:37:06.892Z</updated>
+    
+    <content type="html"><![CDATA[<hr><h3 id="放在全域，比較不會改變的東西"><a href="#放在全域，比較不會改變的東西" class="headerlink" title="放在全域，比較不會改變的東西"></a>放在全域，比較不會改變的東西</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">static string[] strParameters = new string[] &#123; <span class="string">"網域"</span> &#125;;</span><br><span class="line"></span><br><span class="line">static string adPath = strParameters[0];</span><br><span class="line"></span><br><span class="line">string LoginUser = HttpContext.Current.Request.ServerVariables[<span class="string">"LOGON_USER"</span>].Split(<span class="string">'\\'</span>)[1];//這台電腦使用者的登入帳號</span><br><span class="line"></span><br><span class="line">static DirectoryEntry ds = new DirectoryEntry(adPath);</span><br><span class="line"></span><br><span class="line">DirectorySearcher search = new DirectorySearcher(ds);</span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">search.Filter = <span class="string">"SAMAccountName="</span> + LoginUser;//下條件去搜尋，這是用使用者帳號去搜尋。SAMAccountName也可以替換成其他項目，換成wwwhomepage就改成用員編搜尋</span><br><span class="line"></span><br><span class="line">SearchResult result = search.FindOne();//用上面你設定的條件去搜尋</span><br><span class="line"></span><br><span class="line">result.Properties[<span class="string">"wwwhomepage"</span>][0].ToString();//搜尋員工編號，wwwhomepage在AD帳戶管理裡面是員工編號</span><br><span class="line"></span><br><span class="line">result.Properties[<span class="string">"name"</span>][0].ToString().Split(<span class="string">'-'</span>)[1];//搜尋員工姓名，name在AD帳戶管理裡面是部門+姓名，這個搜出來會是「資訊-XXX」，所以用Split去分割，取後面姓名</span><br><span class="line"></span><br><span class="line">其他資訊以此類推，只要換掉你要搜尋的項目</span><br><span class="line"></span><br><span class="line">e.g. : telephonenumber分機號碼、department部門</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;hr&gt;
+
+&lt;h3 id=&quot;放在全域，比較不會改變的東西&quot;&gt;&lt;a href=&quot;#放在全域，比較不會改變的東西&quot; class=&quot;headerlink&quot; title=&quot;放在全域，比較不會改變的東西&quot;&gt;&lt;/a&gt;放在全域，比較不會改變的東西&lt;/h3&gt;&lt;figure class=&quot;high
+      
+    
+    </summary>
+    
+    
+      <category term="暑期實習" scheme="http://yoursite.com/tags/%E6%9A%91%E6%9C%9F%E5%AF%A6%E7%BF%92/"/>
+    
+      <category term="C#" scheme="http://yoursite.com/tags/C/"/>
     
   </entry>
   
@@ -131,6 +158,84 @@
     
     
       <category term="暑期實習" scheme="http://yoursite.com/tags/%E6%9A%91%E6%9C%9F%E5%AF%A6%E7%BF%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>網頁設定</title>
+    <link href="http://yoursite.com/2017/07/12/website-setting/"/>
+    <id>http://yoursite.com/2017/07/12/website-setting/</id>
+    <published>2017-07-12T01:02:00.000Z</published>
+    <updated>2018-05-13T12:25:34.605Z</updated>
+    
+    <content type="html"><![CDATA[<p><hr></p><h3 id=""><a href="#" class="headerlink" title=""></a><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"></h3><p>這個是網頁的相容設定，可以加在head裡，讓IE預設的文件模式是EDGE。IE開了版面會跑掉要看個人電腦的預設。<br>可以用IE按F12去看主控台訊息，幾乎都會把錯的地方顯示出來，可以每個頁面都去看看有沒有哪邊錯。<br>如果要用HTML5的話，要把這個改掉<b>&lt;html xmlns=<a href="http://www.w3.org/1999/xhtml&gt;" target="_blank" rel="noopener">http://www.w3.org/1999/xhtml&gt;</a></b>，VS一開始加入的網頁都不會是HTML5的。<br>套CSS的時候，要選有支援到IE9的，CSS3有些屬性IE9不能用，要去W3School看一下支援到哪。</p><h3 id="IIS錯誤"><a href="#IIS錯誤" class="headerlink" title="IIS錯誤"></a>IIS錯誤</h3><p>%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_regiis.exe -i </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;hr&gt;&lt;/p&gt;
+&lt;h3 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;&quot;&gt;&lt;/a&gt;&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;&gt;&lt;/h3&gt;&lt;p&gt;這個是網
+      
+    
+    </summary>
+    
+    
+      <category term="暑期實習" scheme="http://yoursite.com/tags/%E6%9A%91%E6%9C%9F%E5%AF%A6%E7%BF%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C#發送EMAIL</title>
+    <link href="http://yoursite.com/2017/07/10/C-email/"/>
+    <id>http://yoursite.com/2017/07/10/C-email/</id>
+    <published>2017-07-10T08:36:00.000Z</published>
+    <updated>2018-05-13T12:29:23.251Z</updated>
+    
+    <content type="html"><![CDATA[<hr><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">MailMessage mail = new MailMessage();</span><br><span class="line"></span><br><span class="line">mail.From = new MailAddress(<span class="string">"要拿來發送的mail"</span>);</span><br><span class="line"></span><br><span class="line">mail.To.Add(<span class="string">""</span>); //收件者</span><br><span class="line"></span><br><span class="line">mail.CC.Add(<span class="string">""</span>); //副本</span><br><span class="line"></span><br><span class="line">mail.Subject=<span class="string">""</span>;</span><br><span class="line"></span><br><span class="line">mail.IsBodyHtml = <span class="literal">true</span>;//要寫html在用<span class="literal">true</span></span><br><span class="line"></span><br><span class="line">mail.Body =<span class="string">""</span>;//內容</span><br><span class="line"></span><br><span class="line">mail.BodyEncoding = System.Text.Encoding.GetEncoding(<span class="string">"utf-8"</span>);//編碼</span><br><span class="line"></span><br><span class="line">SmtpClient mailer = new SmtpClient(<span class="string">"郵件伺服器"</span>);</span><br><span class="line"></span><br><span class="line">mailer.Credentials = new System.Net.NetworkCredential(<span class="string">"帳號"</span>, <span class="string">"密碼"</span>);</span><br><span class="line"></span><br><span class="line">mailer.Send(mail); //寄送信件</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;hr&gt;
+
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span 
+      
+    
+    </summary>
+    
+    
+      <category term="暑期實習" scheme="http://yoursite.com/tags/%E6%9A%91%E6%9C%9F%E5%AF%A6%E7%BF%92/"/>
+    
+      <category term="C#" scheme="http://yoursite.com/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C#連接SQL資料庫</title>
+    <link href="http://yoursite.com/2017/07/07/SQL/"/>
+    <id>http://yoursite.com/2017/07/07/SQL/</id>
+    <published>2017-07-07T07:21:00.000Z</published>
+    <updated>2018-05-13T12:32:15.165Z</updated>
+    
+    <content type="html"><![CDATA[<p><hr><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">public static string sqlserver = ConfigurationManager.ConnectionStrings[<span class="string">"MyDB"</span>].ConnectionString;</span><br><span class="line"></span><br><span class="line">using (SqlConn = new SqlConnection(sqlserver))</span><br><span class="line">        &#123;</span><br><span class="line">            SqlConn.Open();//連接到SQL資料庫</span><br><span class="line"></span><br><span class="line">            sql = <span class="string">"select "</span>; //查詢用語法</span><br><span class="line"></span><br><span class="line">            using (SqlCmd = new SqlCommand(sql, SqlConn))</span><br><span class="line">            &#123;</span><br><span class="line">                using (Reader = SqlCmd.ExecuteReader())</span><br><span class="line">                &#123;</span><br><span class="line">                  Reader.Read();//要先Read才有資料</span><br><span class="line"></span><br><span class="line">                  int <span class="built_in">test</span> = Reader.GetInt32(0); //後面GET要跟撈出來的資料同個型態</span><br><span class="line"></span><br><span class="line">                  =============下面這邊不用先Reader.Read(); 就能將資料給GridView==========</span><br><span class="line"></span><br><span class="line">                    GridView1.DataSource = Reader;//設定GridView的資料來源</span><br><span class="line"></span><br><span class="line">                    GridView1.DataBind();</span><br><span class="line">                ============================================================</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">using (SqlConn = new SqlConnection(sqlserver))</span><br><span class="line">        &#123;</span><br><span class="line">            SqlConn.Open();</span><br><span class="line"></span><br><span class="line">            using (SqlCmd = SqlConn.CreateCommand())</span><br><span class="line">        &#123;</span><br><span class="line"></span><br><span class="line">             SqlCmd.CommandText = <span class="string">"INSERT INTO"</span> //新增、更改資料、刪除資料都用這種寫</span><br><span class="line"></span><br><span class="line">                SqlCmd.ExecuteNonQuery(); //執行SQL語法</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;hr&gt;&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="暑期實習" scheme="http://yoursite.com/tags/%E6%9A%91%E6%9C%9F%E5%AF%A6%E7%BF%92/"/>
+    
+      <category term="C#" scheme="http://yoursite.com/tags/C/"/>
+    
+      <category term="SQL" scheme="http://yoursite.com/tags/SQL/"/>
     
   </entry>
   

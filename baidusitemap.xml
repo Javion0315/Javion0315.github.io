@@ -4,8 +4,84 @@
 
     
   <url>
+    <loc>http://yoursite.com/2017/07/23/AD/</loc>
+    <lastmod>2018-05-13T12:37:06.892Z</lastmod>
+    <data>
+        <display>
+        <title>C# AD撈法</title>
+        <pubTime>2017-07-23T05:53:00.000Z</pubTime>
+        
+        <tag>暑期實習</tag>
+         
+        <tag>C#</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2017/07/07/SQL/</loc>
+    <lastmod>2018-05-13T12:32:15.165Z</lastmod>
+    <data>
+        <display>
+        <title>C#連接SQL資料庫</title>
+        <pubTime>2017-07-07T07:21:00.000Z</pubTime>
+        
+        <tag>暑期實習</tag>
+         
+        <tag>C#</tag>
+         
+        <tag>SQL</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2017/07/10/C-email/</loc>
+    <lastmod>2018-05-13T12:29:23.251Z</lastmod>
+    <data>
+        <display>
+        <title>C#發送EMAIL</title>
+        <pubTime>2017-07-10T08:36:00.000Z</pubTime>
+        
+        <tag>暑期實習</tag>
+         
+        <tag>C#</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2017/07/12/website-setting/</loc>
+    <lastmod>2018-05-13T12:25:34.605Z</lastmod>
+    <data>
+        <display>
+        <title>網頁設定</title>
+        <pubTime>2017-07-12T01:02:00.000Z</pubTime>
+        
+        <tag>暑期實習</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2017/07/28/gridview/</loc>
-    <lastmod>2018-05-13T12:14:48.682Z</lastmod>
+    <lastmod>2018-05-13T12:17:21.539Z</lastmod>
     <data>
         <display>
         <title>資料呈現 gridview</title>
