@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="Javion_blog">
 <meta property="og:description" content="放在全域，比較不會改變的東西123456789static string[] strParameters = new string[] &amp;#123; &quot;網域&quot; &amp;#125;;static string adPath = strParameters[0];string LoginUser = HttpContext.Current.Request.ServerVariables[&quot;LOGON_U">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-13T12:37:06.892Z">
+<meta property="og:updated_time" content="2018-05-13T12:39:24.455Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C# AD撈法">
 <meta name="twitter:description" content="放在全域，比較不會改變的東西123456789static string[] strParameters = new string[] &amp;#123; &quot;網域&quot; &amp;#125;;static string adPath = strParameters[0];string LoginUser = HttpContext.Current.Request.ServerVariables[&quot;LOGON_U">
@@ -310,7 +310,7 @@
         <hr>
 
 <h3 id="放在全域，比較不會改變的東西"><a href="#放在全域，比較不會改變的東西" class="headerlink" title="放在全域，比較不會改變的東西"></a>放在全域，比較不會改變的東西</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">static string[] strParameters = new string[] &#123; <span class="string">"網域"</span> &#125;;</span><br><span class="line"></span><br><span class="line">static string adPath = strParameters[0];</span><br><span class="line"></span><br><span class="line">string LoginUser = HttpContext.Current.Request.ServerVariables[<span class="string">"LOGON_USER"</span>].Split(<span class="string">'\\'</span>)[1];//這台電腦使用者的登入帳號</span><br><span class="line"></span><br><span class="line">static DirectoryEntry ds = new DirectoryEntry(adPath);</span><br><span class="line"></span><br><span class="line">DirectorySearcher search = new DirectorySearcher(ds);</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">search.Filter = <span class="string">"SAMAccountName="</span> + LoginUser;//下條件去搜尋，這是用使用者帳號去搜尋。SAMAccountName也可以替換成其他項目，換成wwwhomepage就改成用員編搜尋</span><br><span class="line"></span><br><span class="line">SearchResult result = search.FindOne();//用上面你設定的條件去搜尋</span><br><span class="line"></span><br><span class="line">result.Properties[<span class="string">"wwwhomepage"</span>][0].ToString();//搜尋員工編號，wwwhomepage在AD帳戶管理裡面是員工編號</span><br><span class="line"></span><br><span class="line">result.Properties[<span class="string">"name"</span>][0].ToString().Split(<span class="string">'-'</span>)[1];//搜尋員工姓名，name在AD帳戶管理裡面是部門+姓名，這個搜出來會是「資訊-XXX」，所以用Split去分割，取後面姓名</span><br><span class="line"></span><br><span class="line">其他資訊以此類推，只要換掉你要搜尋的項目</span><br><span class="line"></span><br><span class="line">e.g. : telephonenumber分機號碼、department部門</span><br></pre></td></tr></table></figure>
+<h3 id="可改變的東西"><a href="#可改變的東西" class="headerlink" title="可改變的東西"></a>可改變的東西</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">search.Filter = <span class="string">"SAMAccountName="</span> + LoginUser;//下條件去搜尋，這是用使用者帳號去搜尋。SAMAccountName也可以替換成其他項目，換成wwwhomepage就改成用員編搜尋</span><br><span class="line"></span><br><span class="line">SearchResult result = search.FindOne();//用上面你設定的條件去搜尋</span><br><span class="line"></span><br><span class="line">result.Properties[<span class="string">"wwwhomepage"</span>][0].ToString();//搜尋員工編號，wwwhomepage在AD帳戶管理裡面是員工編號</span><br><span class="line"></span><br><span class="line">result.Properties[<span class="string">"name"</span>][0].ToString().Split(<span class="string">'-'</span>)[1];//搜尋員工姓名，name在AD帳戶管理裡面是部門+姓名，這個搜出來會是「資訊-XXX」，所以用Split去分割，取後面姓名</span><br><span class="line"></span><br><span class="line">其他資訊以此類推，只要換掉你要搜尋的項目</span><br><span class="line"></span><br><span class="line">e.g. : telephonenumber分機號碼、department部門</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -322,7 +322,7 @@
         <p><span>文章標題:</span><a  href="/2017/07/23/AD/">C# AD撈法</a></p>
         <p><span>文章作者:</span><a  href="/" title="訪問 Javion 的個人Blog">Javion</a></p>
         <p><span>發布時間:</span>2017年07月23日 - 13时53分</p>
-        <p><span>最後更新:</span>2018年05月13日 - 20时37分</p>
+        <p><span>最後更新:</span>2018年05月13日 - 20时39分</p>
         <p>
             <span>原始連結:</span><a class="post-url" href="/2017/07/23/AD/" title="C# AD撈法">http://yoursite.com/2017/07/23/AD/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/07/23/AD/　　作者: Javion" title=""></span>
@@ -359,7 +359,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目錄</strong>
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#放在全域，比較不會改變的東西"><span class="toc-number">1.</span> <span class="toc-text">放在全域，比較不會改變的東西</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#放在全域，比較不會改變的東西"><span class="toc-number">1.</span> <span class="toc-text">放在全域，比較不會改變的東西</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#可改變的東西"><span class="toc-number">2.</span> <span class="toc-text">可改變的東西</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
