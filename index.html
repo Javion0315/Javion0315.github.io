@@ -684,9 +684,12 @@
           
         <hr>
 
-<h3 id="相容性設定"><a href="#相容性設定" class="headerlink" title="相容性設定"></a>相容性設定</h3><p><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><br>這個是網頁的相容設定，可以加在head裡，讓IE預設的文件模式是EDGE。IE開了版面會跑掉要看個人電腦的預設。<br>可以用IE按F12去看主控台訊息，幾乎都會把錯的地方顯示出來，可以每個頁面都去看看有沒有哪邊錯。<br>如果要用HTML5的話，要把這個改掉&lt;html xmlns=<a href="http://www.w3.org/1999/xhtml&gt;，VS一開始加入的網頁都不會是HTML5的。" target="_blank" rel="noopener">http://www.w3.org/1999/xhtml&gt;，VS一開始加入的網頁都不會是HTML5的。</a><br>套CSS的時候，要選有支援到IE9的，CSS3有些屬性IE9不能用，要去W3School看一下支援到哪。</p>
-<h3 id="IIS錯誤"><a href="#IIS錯誤" class="headerlink" title="IIS錯誤"></a>IIS錯誤</h3><p>%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_regiis.exe -i </p>
+<h3 id="相容性設定"><a href="#相容性設定" class="headerlink" title="相容性設定"></a>相容性設定</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta http-equiv=<span class="string">"X-UA-Compatible"</span> content=<span class="string">"IE=edge,chrome=1"</span> /&gt;</span><br></pre></td></tr></table></figure>
+<p>這個是網頁的相容設定，可以加在head裡，讓IE預設的文件模式是EDGE。IE開了版面會跑掉要看個人電腦的預設。<br>可以用IE按F12去看主控台訊息，幾乎都會把錯的地方顯示出來，可以每個頁面都去看看有沒有哪邊錯。<br>如果要用HTML5的話，要把下面這個改掉，VS一開始加入的網頁都不會是HTML5的。<br>套CSS的時候，要選有支援到IE9的，CSS3有些屬性IE9不能用，要去W3School看一下支援到哪。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;html xmlns=http://www.w3.org/1999/xhtml&gt;</span><br></pre></td></tr></table></figure>
+<hr>
 
+<h3 id="IIS錯誤"><a href="#IIS錯誤" class="headerlink" title="IIS錯誤"></a>IIS錯誤</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_regiis.exe -i</span><br></pre></td></tr></table></figure>
       
     </div>
     
