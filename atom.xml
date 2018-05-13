@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-05T19:13:50.779Z</updated>
+  <updated>2018-05-13T12:14:25.838Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2018/05/04/angular-config/"/>
     <id>http://yoursite.com/2018/05/04/angular-config/</id>
     <published>2018-05-04T06:10:00.000Z</published>
-    <updated>2018-05-05T19:13:50.779Z</updated>
+    <updated>2018-05-13T12:14:25.838Z</updated>
     
     <content type="html"><![CDATA[<p>karma.conf.js  –&gt; 當需要用到karma單元測試工具的時候可能會用到<br>package.json  –&gt; 目前專案npm的設定檔，最重要的為script區段是經常會用到的命令，也可修改不同的命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"scripts"</span>: &#123;</span><br><span class="line"><span class="string">"ng"</span>: <span class="string">"ng"</span>,</span><br><span class="line"><span class="string">"start"</span>: <span class="string">"ng serve"</span>,</span><br><span class="line"><span class="string">"build"</span>: <span class="string">"ng build --prod"</span>,</span><br><span class="line"><span class="string">"test"</span>: <span class="string">"ng test"</span>,</span><br><span class="line"><span class="string">"lint"</span>: <span class="string">"ng lint"</span>,</span><br><span class="line"><span class="string">"e2e"</span>: <span class="string">"ng e2e"</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure></p><p>protractor.conf.js –&gt; 則是我們在angular裡面實作end to end (e2e) testing的時候會需要用到的設定檔<br>tsconfig.json –&gt; typescript 的相關設定存放的地方，通常不需要修改<br>tslint.json –&gt; 另外一個為tslint的工具，用來定義當你使用tslint工具檢查程式碼品質的時候，所有檢查的規則都定義在這個檔案裡面<br>node_module –&gt; 透過npm安裝好的套件都在這個目錄下，通常不動<br>e2e –&gt; 都是使用typescript寫成的<br>src –&gt; 所有angular的主要程式都放在這個資料夾</p><hr><p>main.ts –&gt; angular 開發javascript的主要檔案<br>app.component.spec.ts / test.ts –&gt; 用來單元測試的定義檔，用來定義如何測試component檔<br>polyfiles.ts –&gt; 使用舊版的瀏覽器時可將相對的註解打開，即可自動import進去<br>typings.d.ts –&gt; typescript會用到的定義檔，用來定義那些額外的typescript型別定義，例: 想整合jquery到                            angular網站裡，便須修改此設定檔</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">declare</span> var $:any; // 定義會用到的全域變數(jquery)</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -35,7 +35,7 @@
     </summary>
     
     
-      <category term="-angular" scheme="http://yoursite.com/tags/angular/"/>
+      <category term="angular" scheme="http://yoursite.com/tags/angular/"/>
     
   </entry>
   
@@ -44,7 +44,7 @@
     <link href="http://yoursite.com/2018/05/03/angular-enviroment/"/>
     <id>http://yoursite.com/2018/05/03/angular-enviroment/</id>
     <published>2018-05-03T03:30:00.000Z</published>
-    <updated>2018-05-05T19:16:48.262Z</updated>
+    <updated>2018-05-13T12:14:22.931Z</updated>
     
     <content type="html"><![CDATA[<p>windows平台套件 –&gt;<a href="https://chocolatey.org/install" target="_blank" rel="noopener">chocolatey</a><br><b><u>使用cmd安裝的時候要使用系統管理員執行，否則會出錯</u></b></p><p>此軟件可以一次性安裝需要軟件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">choco install -y GoogleChrome git nodejs visualstudiocode notepadplusplus</span><br></pre></td></tr></table></figure></p><p>查看版本是否安裝成功<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git version</span><br><span class="line">node -v</span><br><span class="line">code -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure></p><p>安裝angulur CLI<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm i -g @angular/cli</span><br><span class="line">ng -v 查看是否安裝成功</span><br></pre></td></tr></table></figure></p><h3 id="vscode安裝擴充套件-–-gt-angular-extension-pack-保哥"><a href="#vscode安裝擴充套件-–-gt-angular-extension-pack-保哥" class="headerlink" title="vscode安裝擴充套件 –&gt;  angular extension pack 保哥"></a>vscode安裝擴充套件 –&gt;  <b><u>angular extension pack 保哥</u></b></h3>]]></content>
     
@@ -58,7 +58,7 @@
     </summary>
     
     
-      <category term="-angular" scheme="http://yoursite.com/tags/angular/"/>
+      <category term="angular" scheme="http://yoursite.com/tags/angular/"/>
     
   </entry>
   
@@ -67,7 +67,7 @@
     <link href="http://yoursite.com/2017/08/29/link/"/>
     <id>http://yoursite.com/2017/08/29/link/</id>
     <published>2017-08-29T04:26:00.000Z</published>
-    <updated>2018-05-13T12:04:15.678Z</updated>
+    <updated>2018-05-13T12:14:13.674Z</updated>
     
     <content type="html"><![CDATA[<h2 id="IIS-ASP-NET-網站基本優化設定"><a href="#IIS-ASP-NET-網站基本優化設定" class="headerlink" title="IIS - ASP.NET 網站基本優化設定"></a>IIS - ASP.NET 網站基本優化設定</h2><p><a href="https://blog.johnwu.cc/article/iis-optimized-setting.html" target="_blank" rel="noopener">網址</a></p><h2 id="拖曳圖片上傳"><a href="#拖曳圖片上傳" class="headerlink" title="拖曳圖片上傳"></a>拖曳圖片上傳</h2><p><a href="https://codepen.io/netsi1964/pen/IoJbg" target="_blank" rel="noopener">網址</a></p>]]></content>
     
@@ -81,7 +81,7 @@
     </summary>
     
     
-      <category term="-暑期實習" scheme="http://yoursite.com/tags/%E6%9A%91%E6%9C%9F%E5%AF%A6%E7%BF%92/"/>
+      <category term="暑期實習" scheme="http://yoursite.com/tags/%E6%9A%91%E6%9C%9F%E5%AF%A6%E7%BF%92/"/>
     
   </entry>
   
@@ -90,7 +90,7 @@
     <link href="http://yoursite.com/2017/07/28/gridview/"/>
     <id>http://yoursite.com/2017/07/28/gridview/</id>
     <published>2017-07-28T09:04:00.000Z</published>
-    <updated>2018-05-13T12:07:22.500Z</updated>
+    <updated>2018-05-13T12:14:48.682Z</updated>
     
     <content type="html"><![CDATA[<h2 id="新建Datatable存資料"><a href="#新建Datatable存資料" class="headerlink" title="新建Datatable存資料"></a>新建Datatable存資料</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">Dim dt As DataTable = New DataTable</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">            dt.Columns.Add(<span class="string">"F_SGR_NAME"</span>, GetType(System.String))</span><br><span class="line"></span><br><span class="line">            dt.Columns.Add(<span class="string">"GH_ATOLSM"</span>, GetType(System.String))</span><br><span class="line"></span><br><span class="line">            dt.Columns.Add(<span class="string">"F_ADDR"</span>, GetType(System.String))</span><br><span class="line"></span><br><span class="line">            dt.Columns.Add(<span class="string">"HP_DGM"</span>, GetType(System.String))</span><br><span class="line"></span><br><span class="line">            dt.Columns.Add(<span class="string">"HP_PM"</span>, GetType(System.String))</span><br><span class="line"></span><br><span class="line">            dt.Columns.Add(<span class="string">"Sum"</span>, GetType(System.String))</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">    ViewState(<span class="string">"datatable"</span>) = dt  //將DataTable存到ViewState</span><br></pre></td></tr></table></figure><h2 id="讀回ViewState-中的DataTable資料"><a href="#讀回ViewState-中的DataTable資料" class="headerlink" title="讀回ViewState 中的DataTable資料"></a>讀回ViewState 中的DataTable資料</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dim dt As DataTable = CType(ViewState(<span class="string">"datatable"</span>), DataTable)</span><br></pre></td></tr></table></figure><h2 id="創建新的DataRow，將資料寫入，並新增到DataTable"><a href="#創建新的DataRow，將資料寫入，並新增到DataTable" class="headerlink" title="創建新的DataRow，將資料寫入，並新增到DataTable"></a>創建新的DataRow，將資料寫入，並新增到DataTable</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">         Dim drow As DataRow</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">drow = dt.NewRow()</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">drow(0) = ddl_company.SelectedItem.Text</span><br><span class="line"></span><br><span class="line">drow(1) = ddl_address.SelectedValue</span><br><span class="line"></span><br><span class="line">drow(2) = ddl_address.SelectedItem.Text</span><br><span class="line"></span><br><span class="line">drow(3) = ddl_product.SelectedValue</span><br><span class="line"></span><br><span class="line">drow(4) = ddl_product.SelectedItem.Text</span><br><span class="line"></span><br><span class="line">drow(5) = GetValue(tb_sum.Text)</span><br><span class="line"></span><br><span class="line">dt.Rows.Add(drow)</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">        ViewState(<span class="string">"datatable"</span>) = dt</span><br></pre></td></tr></table></figure><h2 id="將DataTable與GridView做資料繫節，顯示資料"><a href="#將DataTable與GridView做資料繫節，顯示資料" class="headerlink" title="將DataTable與GridView做資料繫節，顯示資料"></a>將DataTable與GridView做資料繫節，顯示資料</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GridView1.DataSource = dt</span><br><span class="line"></span><br><span class="line">                    GridView1.DataBind()</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -104,7 +104,9 @@
     </summary>
     
     
-      <category term="-Asp.net -暑期實習" scheme="http://yoursite.com/tags/Asp-net-%E6%9A%91%E6%9C%9F%E5%AF%A6%E7%BF%92/"/>
+      <category term="暑期實習" scheme="http://yoursite.com/tags/%E6%9A%91%E6%9C%9F%E5%AF%A6%E7%BF%92/"/>
+    
+      <category term="-Asp.net" scheme="http://yoursite.com/tags/Asp-net/"/>
     
   </entry>
   
@@ -113,7 +115,7 @@
     <link href="http://yoursite.com/2017/07/21/base64/"/>
     <id>http://yoursite.com/2017/07/21/base64/</id>
     <published>2017-07-21T09:10:00.000Z</published>
-    <updated>2018-05-13T11:59:56.018Z</updated>
+    <updated>2018-05-13T12:14:20.259Z</updated>
     
     <content type="html"><![CDATA[<p><hr><br>一種編碼方式，可以將檔案轉成這種編碼，然後存進資料庫。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">string fileExtension = root.fileExtension; //副檔名</span><br><span class="line"></span><br><span class="line">byte[] fileBuffer = Convert.FromBase64String(root.fileBuffer);//base64編碼，原本是一串字串，轉換成byte陣列</span><br><span class="line"></span><br><span class="line">string filepath = path1 + fileName + fileExtension;//妳要存的檔案名稱</span><br><span class="line"></span><br><span class="line">FileStream fs = new FileStream(filepath, FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite);//NEW一個檔案記憶體</span><br><span class="line"></span><br><span class="line">fs.Write(fileBuffer, 0, fileBuffer.Length);//將byte陣列資料寫入 fs記憶體</span><br><span class="line"></span><br><span class="line">fs.Flush();//清除緩衝，將緩衝資料解入檔案</span><br><span class="line"></span><br><span class="line">fs.Close();//關閉</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -128,7 +130,7 @@
     </summary>
     
     
-      <category term="-暑期實習" scheme="http://yoursite.com/tags/%E6%9A%91%E6%9C%9F%E5%AF%A6%E7%BF%92/"/>
+      <category term="暑期實習" scheme="http://yoursite.com/tags/%E6%9A%91%E6%9C%9F%E5%AF%A6%E7%BF%92/"/>
     
   </entry>
   
