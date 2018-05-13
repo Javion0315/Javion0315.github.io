@@ -166,9 +166,9 @@
     <link href="http://yoursite.com/2017/07/12/website-setting/"/>
     <id>http://yoursite.com/2017/07/12/website-setting/</id>
     <published>2017-07-12T01:02:00.000Z</published>
-    <updated>2018-05-13T12:50:49.330Z</updated>
+    <updated>2018-05-13T12:52:05.226Z</updated>
     
-    <content type="html"><![CDATA[<hr><h3 id=""><a href="#" class="headerlink" title=""></a><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"></h3><p>這個是網頁的相容設定，可以加在head裡，讓IE預設的文件模式是EDGE。IE開了版面會跑掉要看個人電腦的預設。<br>可以用IE按F12去看主控台訊息，幾乎都會把錯的地方顯示出來，可以每個頁面都去看看有沒有哪邊錯。<br>如果要用HTML5的話，要把這個改掉<b>&lt;html xmlns=<a href="http://www.w3.org/1999/xhtml&gt;" target="_blank" rel="noopener">http://www.w3.org/1999/xhtml&gt;</a></b>，VS一開始加入的網頁都不會是HTML5的。<br>套CSS的時候，要選有支援到IE9的，CSS3有些屬性IE9不能用，要去W3School看一下支援到哪。</p><h3 id="IIS錯誤"><a href="#IIS錯誤" class="headerlink" title="IIS錯誤"></a>IIS錯誤</h3><p>%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_regiis.exe -i </p>]]></content>
+    <content type="html"><![CDATA[<hr><h3 id="相容性設定"><a href="#相容性設定" class="headerlink" title="相容性設定"></a>相容性設定</h3><p><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><br>這個是網頁的相容設定，可以加在head裡，讓IE預設的文件模式是EDGE。IE開了版面會跑掉要看個人電腦的預設。<br>可以用IE按F12去看主控台訊息，幾乎都會把錯的地方顯示出來，可以每個頁面都去看看有沒有哪邊錯。<br>如果要用HTML5的話，要把這個改掉&lt;html xmlns=<a href="http://www.w3.org/1999/xhtml&gt;，VS一開始加入的網頁都不會是HTML5的。" target="_blank" rel="noopener">http://www.w3.org/1999/xhtml&gt;，VS一開始加入的網頁都不會是HTML5的。</a><br>套CSS的時候，要選有支援到IE9的，CSS3有些屬性IE9不能用，要去W3School看一下支援到哪。</p><h3 id="IIS錯誤"><a href="#IIS錯誤" class="headerlink" title="IIS錯誤"></a>IIS錯誤</h3><p>%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_regiis.exe -i </p>]]></content>
     
     <summary type="html">
     
@@ -176,7 +176,7 @@
       
         &lt;hr&gt;
 
-&lt;h3 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;&quot;&gt;&lt;/a&gt;&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;&gt;&lt;/h3&gt;&lt;p&gt;這個是網頁的相容設定
+&lt;h3 id=&quot;相容性設定&quot;&gt;&lt;a href=&quot;#相容性設定&quot; class=&quot;headerlink&quot; title=&quot;相容性設定&quot;&gt;&lt;/a&gt;相容性設定&lt;/h3&gt;&lt;p&gt;&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,
       
     
     </summary>
